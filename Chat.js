@@ -22,6 +22,8 @@ var Chat = (function () {
  let module = {}
 
  module.joinChat = function (user) {
+   console.log('User joined chat', user)
+
  users.push(user)
  }
 
