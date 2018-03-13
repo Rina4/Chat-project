@@ -12,21 +12,38 @@ Censor messages containing certain words
 Censored should still be saved
 
 */
-
-
-
 var Chat = (function () {
- // Users
- let users = []
-
- let module = {}
-
- module.joinChat = function (user) {
-   console.log('User joined chat', user)
-
- users.push(user)
- }
-
- return module
-
+    // Users
+    let users = []
+    let module = {}
+    module.joinChat = function (user) {
+      function contains(users, user){}
+      for (let i = 0; i <users.length; i ++){
+        if (users[i]== user){
+          console.log ('User joined chat', user)
+          users.push(user)
+        } else {
+          console.log ('user already taken')
+        }
+    return module
 })()
+
+/*
+
+module.joinChat = function (user){
+console.log ('user is trying to join', user)
+let userAlreadyConn = false
+
+for(let i = 0; i <users.length; i ++){
+if (users[i]==user){
+userAlreadyConn = true
+  }
+}
+if (userAlreadyConn){
+  console.log ('user already connected')
+} else {
+  users.push(user)
+}
+return module
+}
+*/
