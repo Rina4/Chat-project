@@ -10,25 +10,51 @@ Search within messages
 By content and by author
 Censor messages containing certain words
 Censored should still be saved
-
 */
+
 var Chat = (function () {
-    // Users
-    let users = []
-    let module = {}
+    let users = [];
+    let module = {};
+
     module.joinChat = function (user) {
-      function contains(users, user){}
-      for (let i = 0; i <users.length; i ++){
-        if (users[i]== user){
-          console.log ('User joined chat', user)
-          users.push(user)
-        } else {
-          console.log ('user already taken')
+      console.log ('Users is trying to join the chat', user);
+      let userAlreadyConn = false;
+
+      for(let i = 0; i < users.lenth; i++){
+        if (users[i] == user){
+          userAlreadyConn = true;
         }
-    return module
-})()
+     }
+     if (userAlreadyConn){
+       console.log('User already exists: ', user);
+     } else {
+       users.push (user);
+       console.log('User joined the Chat: ', user);
+     }
+    return module;
+  }
+})();
+
+
+
+
 
 /*
+module.joinChat = function (user) {
+  console.log('User is trying to join: ', user)
+  let userAlreadyConn = false
+
+  for (let i=0; i<users.length; i++){
+    if (users[i] == user){
+      console.log ('User already exists', user)
+      userAlreadyConn = true
+    } else {
+    users.push(user)
+    console.log ('User joined Chat: ', user)
+}
+return module
+
+
 
 module.joinChat = function (user){
 console.log ('user is trying to join', user)
@@ -46,4 +72,9 @@ if (userAlreadyConn){
 }
 return module
 }
+
+
+
+
+
 */
