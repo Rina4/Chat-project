@@ -28,3 +28,6 @@ var Chat = (function () {
  return module
 
 })()
+
+
+//Changes
