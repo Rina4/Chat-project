@@ -14,11 +14,11 @@ Censored should still be saved
 */
 var Chat = (function () {
  // Users
- let users = []
+let users = []
 
 let module = {}
 module.joinChat = function (user) {
-  console.log('User is trying to join', user)
+  console.log('User is trying to join: ', user)
 
   let userAlreadyConnected = false
 
@@ -31,16 +31,17 @@ module.joinChat = function (user) {
 
 
   if (userAlreadyConnected) {
-    console.log('User already connnected', user)
+    console.log('User already connnected: ', user)
   } else {
   //Add user to connected users
     users.push(user)
+    console.log ('User joined Chat: ', user)
   }
 }
 return module
 })()
 
-module.joinChat('Rina')
+//module.joinChat('Rina')
 
 /*different arrays for different functions,
  e.g. an array for chat messages, for usernames etc.
