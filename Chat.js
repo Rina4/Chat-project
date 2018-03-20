@@ -40,7 +40,19 @@ module.joinChat = function (user) {
 return module
 })()
 
-module.joinChat('Rina')
+
+let module = {}
+module.leaveChat = function (user) {
+  console.log('User is trying to leave' , user)
+
+  let
+
+
+
+}
+
+
+// module.joinChat('Rina')
 
 /*different arrays for different functions,
  e.g. an array for chat messages, for usernames etc.
